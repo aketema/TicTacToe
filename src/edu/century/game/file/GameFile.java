@@ -36,6 +36,7 @@ public class GameFile {
 			fw = new FileWriter(FILENAME);
 			bw = new BufferedWriter(fw);
 			for (String str : plays) {
+				//each line is a play and corresponding to the position/key in the array
 				if (str != null) {
 					bw.write(str+"\n");
 				} else {
@@ -84,6 +85,8 @@ public class GameFile {
 			while (line != null) {
 				if( i >=9)
 					break;
+				//each line is a play corresponding to the position of the play in an
+				// array
 				line = line.replace("\n", "");
 				plays[i] = line;
 				i++;
